@@ -14,6 +14,16 @@ import UserState from './components/states/userState';
 import UserTypeAssertion from './components/states/userTypeAssertion';
 import CounterReducer from './components/states/counterReducer';
 import StrictReducer from './components/states/strictReducer';
+import { ThemeContextProvider } from './components/contextes/ThemeContext';
+import { Box } from './components/contextes/Box';
+import { UserContext } from './components/contextes/userContext';
+import { User } from './components/contextes/users';
+import { DomRef } from './components/Ref/DomRef';
+import { MutableRef } from './components/Ref/MutableRef';
+import { Counter } from './components/classComponent/Counter';
+import { Private } from './components/auth/Private';
+import { Profile } from './components/auth/Profile';
+
 function App() {
   const personData={
     fname:'vj',
@@ -54,6 +64,16 @@ function App() {
     <UserTypeAssertion/>
     <CounterReducer/>
 <StrictReducer/>
+<ThemeContextProvider>
+  <Box/>
+</ThemeContextProvider>
+<UserContext>
+  <User/>
+</UserContext>
+<DomRef/>
+<MutableRef/>
+<Counter message='welcome vj'/>
+<Private isLoggedIn={true} component={Profile}/>
     </div>
   );
 }
