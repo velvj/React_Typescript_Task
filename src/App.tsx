@@ -23,6 +23,11 @@ import { MutableRef } from './components/Ref/MutableRef';
 import { Counter } from './components/classComponent/Counter';
 import { Private } from './components/auth/Private';
 import { Profile } from './components/auth/Profile';
+import { Lists } from './components/Generics/Lists';
+import { RandomNumber } from './components/RestrictProps/RandomNumber';
+import { Toast } from './components/TemplateLiteral/Toast';
+import { CustomButtion } from './components/HTML/Button';
+import { CustomComponent } from './components/HTML/CustomComponent';
 
 function App() {
   const personData={
@@ -74,6 +79,14 @@ function App() {
 <MutableRef/>
 <Counter message='welcome vj'/>
 <Private isLoggedIn={true} component={Profile}/>
+<Lists items={[{id:1,first:'vj',last:'jack'}]} onClick={(val)=>console.log(val)}/>
+<RandomNumber value={20} isNegative />
+<Toast position='center'/>
+<CustomButtion variant='primary' onClick={()=>console.log('clicked')}>
+  Primary button
+</CustomButtion>
+<CustomComponent Uname='vj' countMsg={20} loggedIn/>
+
     </div>
   );
 }
