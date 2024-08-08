@@ -28,6 +28,7 @@ import { RandomNumber } from './components/RestrictProps/RandomNumber';
 import { Toast } from './components/TemplateLiteral/Toast';
 import { CustomButtion } from './components/HTML/Button';
 import { CustomComponent } from './components/HTML/CustomComponent';
+import { Text } from './components/Polymorphic/Text';
 
 function App() {
   const personData={
@@ -86,6 +87,9 @@ function App() {
   Primary button
 </CustomButtion>
 <CustomComponent Uname='vj' countMsg={20} loggedIn/>
+<Text as='p' size='sm'  >heading</Text>
+<Text as='h1' size='md'  >paragraph</Text>
+<Text as='label' htmlFor='SID' size='lg' color='primary' >welcome vj</Text>
 
     </div>
   );
